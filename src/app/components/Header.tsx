@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Image from 'next/image'
 
 export default function Header() {
   return (
@@ -7,7 +6,21 @@ export default function Header() {
       <div className="container mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center">
         <div className="flex items-center mb-4 sm:mb-0">
           <Link href="/" className="flex items-center">
-            <Image src="/logo.png" alt="Logo" width={32} height={32} className="mr-2" />
+            <svg 
+              preserveAspectRatio="none" 
+              data-bbox="0 0 200 200" 
+              xmlns="http://www.w3.org/2000/svg" 
+              width="32" 
+              height="32" 
+              viewBox="0 0 200 200" 
+              role="img" 
+              aria-label="Homepage"
+              className="mr-2"
+            >
+              <g>
+                <path d="M200 100c0 55.228-44.772 100-100 100S0 155.228 0 100 44.772 0 100 0s100 44.772 100 100z" fill="currentColor"></path>
+              </g>
+            </svg>
             <span className="text-xl font-semibold text-gray-800">Dalya Baron</span>
           </Link>
           <span className="ml-4 text-sm text-gray-600">Postdoctoral research fellow</span>

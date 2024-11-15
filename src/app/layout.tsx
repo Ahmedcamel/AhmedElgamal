@@ -1,10 +1,12 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Montserrat } from 'next/font/google'
 import './globals.css'
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
+const montserrat = Montserrat({ subsets: ['latin'] })
+
 
 export const metadata: Metadata = {
   title: 'Dalya Baron | Astronomy',
@@ -18,10 +20,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="h-full">
-      <body className={`${inter.className} flex flex-col min-h-full bg-[rgb(243,243,243)]`}>
-        {/* <Header /> */}
+      <body className={`${montserrat.className} flex flex-col min-h-full bg-[rgb(243,243,243)]`}>
+      <Header />
         <main className="flex-grow">{children}</main>
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   )
